@@ -3,7 +3,7 @@
 
 **Author:** Gallage H.D.N. Ariyaratne 
 **Institution:** Florida State University College of Medicine  
-**Lab:** Stephen P. Chelko, Ph.D., FHRS, FACC - Laboratory  
+**Lab:** Stephen P. Chelko Laboratory  
 **Committee Member:** Dr. Julia Wang  
 
 ## Overview
