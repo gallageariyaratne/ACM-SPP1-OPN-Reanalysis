@@ -1,7 +1,7 @@
 # Computational Reanalysis of GSE228048
 ## SPP1/OPN-Associated Cell States in Arrhythmogenic Cardiomyopathy
 
-**Author:** Gallage H.D.N. Ariyaratne (Nipun)  
+**Author:** Gallage H.D.N. Ariyaratne 
 **Institution:** Florida State University College of Medicine  
 **Lab:** Chelko Laboratory  
 **Qualifying Exam:** Written Exam 1, May 2026  
