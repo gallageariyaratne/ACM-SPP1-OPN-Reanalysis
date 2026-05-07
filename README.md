@@ -3,8 +3,7 @@
 
 **Author:** Gallage H.D.N. Ariyaratne 
 **Institution:** Florida State University College of Medicine  
-**Lab:** Chelko Laboratory  
-**Qualifying Exam:** Written Exam 1, May 2026  
+**Lab:** Stephen P. Chelko, Ph.D., FHRS, FACC - Laboratory  
 **Committee Member:** Dr. Julia Wang  
 
 ## Overview
