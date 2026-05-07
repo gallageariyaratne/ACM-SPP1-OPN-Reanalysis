@@ -1,6 +1,3 @@
-# ============================================================
-# Module IV: DAM Identity + Fibroblast OPN Responsiveness
-# ============================================================
 
 library(Seurat)
 library(ggplot2)
@@ -8,7 +5,7 @@ library(ggplot2)
 myeloid <- readRDS("results/myeloid_obj.rds")
 sn      <- readRDS("results/sn_filtered.rds")
 
-# ── Figure 7: Spp1 co-expression in Dsg2mut myeloid ───────
+
 dsg2_myeloid <- subset(myeloid, genotype == "Dsg2mut")
 
 # Pearson correlation of all genes with Spp1
@@ -29,7 +26,7 @@ write.csv(data.frame(gene = names(top_corr),
                      pearson_r = top_corr),
           "results/tables/spp1_pearson_correlations.csv")
 
-# ── Supplementary Figure S3: Spp1+ vs Spp1- comparison ───
+
 myeloid$spp1_pos <- GetAssayData(myeloid, 
                                   assay = "SCT",
                                   slot  = "data")["Spp1", ] > 0
@@ -40,7 +37,7 @@ spp1_neg <- myeloid@meta.data[myeloid$spp1_pos == FALSE, ]
 message("Spp1+ nuclei: ", sum(myeloid$spp1_pos))
 message("Spp1- nuclei: ", sum(!myeloid$spp1_pos))
 
-# Mean expression of DAM markers in each group
+
 dam_genes <- c("Spp1", "Trem2", "Fn1", "Lgals3", "Gpnmb",
                "Timd4", "Lyve1", "Ccr2", "Adgre1", "Cd44")
 
@@ -65,10 +62,10 @@ write.csv(dam_results,
           row.names = FALSE)
 print(dam_results)
 
-# ── Figure 8: Fibroblast compartment analysis ─────────────
+
 fibroblasts <- subset(sn, cell_type == "Fibroblast")
 
-# CD44-high vs CD44-low stratification
+
 cd44_expr <- GetAssayData(fibroblasts, 
                            assay = "SCT", 
                            slot  = "data")["Cd44", ]
@@ -78,13 +75,13 @@ fibroblasts$cd44_group <- ifelse(
   "CD44-high", "CD44-low"
 )
 
-# Myofibroblast score
+
 activation_genes <- c("Postn", "Acta2", "Col1a1", "Col3a1")
 fibroblasts <- AddModuleScore(fibroblasts,
                                features = list(activation_genes),
                                name     = "Myofibroblast")
 
-# Compare scores between CD44-high and CD44-low
+
 high_scores <- fibroblasts$Myofibroblast1[
   fibroblasts$cd44_group == "CD44-high"]
 low_scores  <- fibroblasts$Myofibroblast1[
