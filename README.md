@@ -42,7 +42,3 @@ All analyses were performed on the FSU HPC cluster.
 Conda environment: acm_analysis  
 Module: R/4.3.1  
 
-## Statistical Methods Note
-See `supplementary/statistical_methods_note.md` for full declaration 
-of all statistical tests, correction methods, and fold change 
-calculation procedures referenced in the essay.
